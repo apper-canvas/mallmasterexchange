@@ -8,6 +8,7 @@ import { Sun, Moon, Menu, X, Building2, Calendar, Tool, BarChart2, Home } from '
 // Pages
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Analytics from './pages/Analytics';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -67,7 +68,7 @@ export default function App() {
               <NavLink to="/tenants" icon={<Building2 size={20} />} label="Tenants" />
               <NavLink to="/maintenance" icon={<Tool size={20} />} label="Maintenance" />
               <NavLink to="/events" icon={<Calendar size={20} />} label="Events" />
-              <NavLink to="/analytics" icon={<BarChart2 size={20} />} label="Analytics" />
+              <NavLink to="/analytics" icon={<BarChart2 size={20} />} label="Visitor Analytics" />
             </div>
             
             <div className="pt-4 border-t border-surface-200 dark:border-surface-700">
@@ -98,6 +99,7 @@ export default function App() {
               >
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/analytics" element={<Analytics />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </motion.div>
